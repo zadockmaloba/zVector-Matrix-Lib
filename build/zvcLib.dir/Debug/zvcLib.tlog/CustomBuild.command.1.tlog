@@ -1,0 +1,10 @@
+^C:\USERS\HP\DOCUMENTS\CODINGNPROGRAMMING\PROJECTS\C++PROJECTS\TESTS\ZEDVECTORLIB\MATRIX\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/HP/Documents/codingnprogramming/projects/C++projects/Tests/ZedVectorLib/Matrix -BC:/Users/HP/Documents/codingnprogramming/projects/C++projects/Tests/ZedVectorLib/build --check-stamp-file C:/Users/HP/Documents/codingnprogramming/projects/C++projects/Tests/ZedVectorLib/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

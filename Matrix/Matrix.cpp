@@ -184,14 +184,11 @@ zvlib::Mat tre = {{1,2,3},{4,2,5},{5,2,1}};
 int main()
 {
     zvlib::Matrix *mtrx = new zvlib::Matrix();
-    mtrx->printVec(as);
-    //as=mtrx->scalarMul(as, 9);
-    zvlib::Mat n = mtrx->scalarDiv(xz, 2);
-    //zvlib::Mat wsa = mtrx->Add(xz, n);
-    zvlib::Mat b = mtrx->Multiply(tre, tre);
-    //mtrx->printVec(wsa);
-    mtrx->printVec(n);
-    mtrx->printVec(b);
-    std::cout<<mtrx->isUnit(tre);
-    return 0;
+    zvlib::Mat a = {{2,2},
+                    {4,4}};
+    zvlib::Mat b = {{1,2},
+                    {2,3}};
+
+    zvlib::Mat ans= mtrx->Multiply(a, b);
+    mtrx->printVec(ans);
 }

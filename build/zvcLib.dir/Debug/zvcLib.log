@@ -1,0 +1,4 @@
+﻿  Matrix.cpp
+C:\Users\HP\Documents\codingnprogramming\projects\C++projects\Tests\ZedVectorLib\Matrix\Matrix.cpp(16,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\HP\Documents\codingnprogramming\projects\C++projects\Tests\ZedVectorLib\Matrix\Matrix.cpp(19,27): warning C4018: '<': signed/unsigned mismatch
+  zvcLib.vcxproj -> C:\Users\HP\Documents\codingnprogramming\projects\C++projects\Tests\ZedVectorLib\build\Debug\zvcLib.exe
