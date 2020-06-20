@@ -117,10 +117,11 @@ namespace zvlib
     {
         for(int i=0; i<b.size(); i++)//number of rows
         {
+            std::cout<<"| ";
             for(int j=0; j<b[i].size(); j++)//number of columns
             {
                 std::cout<<b[i][j]<<", ";
-            }
+            }std::cout<<"|";
             std::cout<<std::endl;
         }
         std::cout<<std::endl;
@@ -176,18 +177,13 @@ namespace zvlib
     }
 }//namespace zvlib
 
-zvlib::Mat as={{1,2},{1,2}};
-zvlib::Mat xz = {{1,2,0,4,5}, {2,3,4,5,7}};
-zvlib::Mat nb ={{1,0}, {0,1}};
-zvlib::Mat tre = {{1,2,3},{4,2,5},{5,2,1}};
-
 int main()
 {
     zvlib::Matrix *mtrx = new zvlib::Matrix();
-    zvlib::Mat a = {{2,2},
-                    {4,4}};
-    zvlib::Mat b = {{1,2},
-                    {2,3}};
+    zvlib::Mat a = {{2,2,2},
+                    {4,4,4}};
+    zvlib::Mat b = {{1,2,1},
+                    {2,3,1}};
 
     zvlib::Mat ans= mtrx->Multiply(a, b);
     mtrx->printVec(ans);

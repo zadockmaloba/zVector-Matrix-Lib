@@ -12,7 +12,7 @@ namespace zvlib
 	class Matrix  
 	{
 		private:
-			const std::vector<std::vector<int> > uVec = {{1,0},{0,1}};
+			const std::vector<std::vector<double> > uVec = {{1,0},{0,1}};
 			Mat ans;
 		
 		//public: //public data types
