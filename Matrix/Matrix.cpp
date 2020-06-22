@@ -77,11 +77,11 @@ namespace zvlib
         {
             for(int j=0; j<a[i].size()-1; j++)//number of columns
             {
-                if(a[i][j+1]  && b[i+1][j] ){
                    m.push_back((a[i][j] * b[i][j]) + (a[i][j+1] * b[i+1][j]));
                    m.push_back((a[i][j] * b[i][j+1]) + (a[i][j+1] * b[i+1][j+1]));
-                }
+                   if(m[j] == m[~j]) ;
             }
+            //m.push_back((a[i][~1] * b[i][2]) + (a[i][2+1] * b[i+1][2]));
             ans.push_back(m);
             m.clear();
         }
@@ -89,21 +89,12 @@ namespace zvlib
         {
             for(int j=0; j<a[i].size()-1; j++)//number of columns
             {
-                if(a[i][j+1]  && b[i+1][j] ){
-                   m.push_back((a[i+1][j] * b[i][j]) + (a[i+1][j+1] * b[i+1][j]));
+                   m.push_back((a[i+1][j] * b[i][j]) + (a[i+1][j+1] * b[i+1][j])); 
                    m.push_back((a[i+1][j] * b[i][j+1]) + (a[i+1][j+1] * b[i+1][j+1]));
-                }
             }
+
             ans.push_back(m);
             m.clear();
-        }
-        for(int i=ans.size();i>a.size(); i--)
-        {
-            for(int j =0; j<ans.size(); j++)
-            {
-                ans[j].pop_back();
-            }
-            ans.pop_back();
         }
         ans.shrink_to_fit();
         return ans;
@@ -141,7 +132,6 @@ namespace zvlib
     Mat Matrix::scalarMul(Mat& a, int b) 
     {
         ans.clear();
-        //Mat y;
         std::vector<double> m;
         for(int i =0 ; i<a.size(); i++)//number of rows
         {
@@ -187,4 +177,6 @@ int main()
 
     zvlib::Mat ans= mtrx->Multiply(a, b);
     mtrx->printVec(ans);
+    std::cout<<mtrx->Multiply(a,b)[0][0];
+    delete(mtrx);
 }

@@ -47,6 +47,7 @@
         "deque": "cpp",
         "fstream": "cpp",
         "queue": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iterator": "cpp"
     }
 }
